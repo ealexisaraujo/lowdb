@@ -13,3 +13,10 @@ const createConnection = async () => {
   db = await low(adapter);
   db.defaults({ tasks: [] }).write();
 };
+
+const getConnection = () => db;
+
+module.exports = {
+  createConnection,
+  getConnection,
+};
