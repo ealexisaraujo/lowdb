@@ -1,3 +1,13 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "40a023aa-3010-4194-a0ab-21e07560443e",
+      "name": "Hola PlatiziMasters"
+    },
+    {
+      "id": "80d1ddd6-0bdc-4a0b-9779-d5f511c2323f",
+      "name": "Hola PlatiziMasters",
+      "description": "Enseñando usar lowdb"
+    }
+  ]
 }

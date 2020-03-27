@@ -8,6 +8,16 @@ const getTasks = (req, res) => {
   res.json(tasks);
 };
 
+const getTask = (req, res) => {
+  const task = getConnection()
+    .get('tasks')
+    .find({
+      id: req.params.id,
+    })
+    .value();
+  res.json(task);
+};
+
 const createTask = (req, res) => {
   const newTask = {
     id: v4(),
@@ -21,4 +31,4 @@ const createTask = (req, res) => {
   res.send(newTask);
 };
 
-module.exports = { getTasks, createTask };
+module.exports = { getTasks, createTask, getTask };
