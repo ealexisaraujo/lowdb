@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "DEBUG=app:* nodemon src/index --ignore db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
