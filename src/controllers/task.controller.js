@@ -18,6 +18,17 @@ const getTask = (req, res) => {
   res.json(task);
 };
 
+const updateTask = async (req, res) => {
+  const result = await getConnection()
+    .get('tasks')
+    .find({
+      id: req.params.id,
+    })
+    .assign(req.body)
+    .write();
+  res.json(result);
+};
+
 const createTask = (req, res) => {
   const newTask = {
     id: v4(),
@@ -31,4 +42,4 @@ const createTask = (req, res) => {
   res.send(newTask);
 };
 
-module.exports = { getTasks, createTask, getTask };
+module.exports = { getTasks, createTask, getTask, updateTask };
