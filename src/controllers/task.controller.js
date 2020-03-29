@@ -41,5 +41,14 @@ const createTask = (req, res) => {
     .write();
   res.send(newTask);
 };
+const deleteTask = (req, res) => {
+  const result = getConnection()
+    .get('tasks')
+    .remove({
+      id: req.params.id,
+    })
+    .write();
+  res.json(result);
+};
 
-module.exports = { getTasks, createTask, getTask, updateTask };
+module.exports = { getTasks, createTask, getTask, updateTask, deleteTask };
