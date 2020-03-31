@@ -1,4 +1,4 @@
-const { getConnection } = require('../db');
+const { getConnection } = require('../../db');
 const { v4 } = require('uuid');
 
 const getTasks = (req, res) => {

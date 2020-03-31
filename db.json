@@ -1,3 +1,9 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "4f4baa35-5ac7-4ddd-b708-2f0d78d874f5",
+      "name": "Hola ",
+      "description": "Enseñando usar lowdb"
+    }
+  ]
 }
